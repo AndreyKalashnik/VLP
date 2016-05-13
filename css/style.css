@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    line-height: 1.42em;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.container {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/*------------header------------*/
+.header {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+}
+.header__logo, .header__search {
+    float: left;
+}
+.header__logo {
+    width: 33%;
+}
+.header__search {
+    width: 33%;
+}
+.search {
+    position: relative;
+}
+.search__input {
+    padding: 10px 40px 10px 10px;
+    background: #ccc;
+    outline: none;
+    color: #000;
+    width: 100%;
+
+}
+.search__submit {
+    background: url("../img/icons/magnifier-tool.png") 0 0 no-repeat;
+    width: 26px;
+    height: 26px;
+    border: none;
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top:-11px;
+    padding: 0;
+}
+
+/*-----------Content-----------*/
+
+.section__content{
+    width: 100%;
+    height: auto;
+}
+.content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    background: #aaa;
+}
+.items-wrapper{
+    width: 77%;
+}
+.sidebar {
+    width: 23%;
+    height: auto;
+    background: #3f2cd6;
+    margin: 16px 3px;
+}
+.content__items {
+    list-style: none;
+    display: flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-left: 0;
+}
+.items {
+    margin: 2px 5px;
+}
+.item__link {
+    width: 100%;
+    height: 100%;
+}
+.img {
+    width: 296px;
+    height: 296px;
+}
+.img-long {
+    width: 600px;
+    height: 296px;
+    background: #3f2cd6;
+}
+.link__img {
+    width: 100%;
+    height: 100%;
+    transition: 1.5s;
+    -webkit-transition: 1.5s;
+    -moz-transition: 1.5s;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+}
+.img .link__img:hover {
+    transform: scale(1.25)
+}
+
+/*-------------media query--------------*/
+@media screen and (max-width: 480px) {
+    h1 {color: lightblue;}
+    .header__search {width: 66%;}
+    .sidebar { display: none }
+    .items-wrapper {margin: 0 auto;}
+    .img:hover .link__img{transform: scale(1.0)}
+}
+@media screen and (max-width: 870px) {
+    .img-long {width: 296px}
+}
